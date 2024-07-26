@@ -1,6 +1,8 @@
 # template-laravel-11-docker
 A reusable template based on laravel 11 - Docker ready
 
+Made to be used with the **[template-nuxt-3-docker](https://github.com/E-IckArt/template-nuxt-3-docker.git) repository**.
+
 It's includes a PostgreSQL database and a PGAdmin 4 GUI.
 It ready to be used as a back-end API, but making some changes, you can use it with Laravel blade template or any other tool if you want.
 
@@ -39,14 +41,19 @@ cp .env.example .env
 ```
 
 2 - Update `.env`, `devcontainer.json` and `docker-compose.yml` file with your own configuration.
-  - ⚠️ If you do not use Laravel as an API, in the `docker-compose.yml` file, remove the network named `app-network`.  
+  - ⚠️ If you do not use Laravel as an API : 
+    - in the `docker-compose.yml` file, remove the network named `app-network`,
+    
+    - in the `.env` file, remove this environment variable : 
+        ```env
+        SANCTUM_STATEFUL_DOMAINS=localhost:3000
+        ```
+   
   - ⚠️ Be careful with the names you give, they must be the same from one file to another.  
 
 💡 Use the find and replace function of your editor.
 
-```shell
-cp .env.example .env
-```
+
 
 3 - Create an alias for the sail command
 
