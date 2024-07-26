@@ -38,12 +38,13 @@ Maybe you don't need them.
 cp .env.example .env
 ```
 
-2 - Update `.env` file with your own configuration
+2 - Update `.env`, `devcontainer.json` and `docker-compose.yml` file with your own configuration.  
+Be careful with the names you give, they must be the same from one file to another.
+💡 Use the find and replace function of your editor.
 
 ```shell
 cp .env.example .env
 ```
-
 
 3 - Create an alias for the sail command
 
