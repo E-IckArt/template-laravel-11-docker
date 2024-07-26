@@ -2,7 +2,7 @@
 A reusable template based on laravel 11 - Docker ready
 
 It's includes a PostgreSQL database and a PGAdmin 4 GUI.
-It can be used as a back-end API or with Laravel blade template or any other tool you need.
+It ready to be used as a back-end API, but making some changes, you can use it with Laravel blade template or any other tool if you want.
 
 A devContainer is already installed.
 
@@ -38,8 +38,10 @@ Maybe you don't need them.
 cp .env.example .env
 ```
 
-2 - Update `.env`, `devcontainer.json` and `docker-compose.yml` file with your own configuration.  
-Be careful with the names you give, they must be the same from one file to another.
+2 - Update `.env`, `devcontainer.json` and `docker-compose.yml` file with your own configuration.
+  - ⚠️ If you do not use Laravel as an API, in the `docker-compose.yml` file, remove the network named `app-network`.  
+  - ⚠️ Be careful with the names you give, they must be the same from one file to another.  
+
 💡 Use the find and replace function of your editor.
 
 ```shell
